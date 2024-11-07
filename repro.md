@@ -1,36 +1,33 @@
-I started with `npm create cloudflare@latest -- . --framework=next --experimental` and installed the packages `npm @t3-oss/env-nextjs zod`.
+Steps to reproduce:
+- Started with `npm create cloudflare@latest -- . --framework=next --experimental` and installed `@t3-oss/env-nextjs` and `zod`.
+- Added `target: "ES2017"` to `tsconfig.json`.
+- Created `env.ts` in `src/`:
 
-I added `target: "ES2017"` to tsconfig.json
-I created env.ts in src/:
-```typescript
-import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { createEnv } from "@t3-oss/env-nextjs";
-import { z } from "zod";
+    ```typescript
+    import { getCloudflareContext } from "@opennextjs/cloudflare";
+    import { createEnv } from "@t3-oss/env-nextjs";
+    import { z } from "zod";
 
-const { env: cfEnv } = await getCloudflareContext();
+    const { env: cfEnv } = await getCloudflareContext();
 
-export const env = createEnv({
-  server: {
-    DEMO: z.string().trim().min(1),
-  },
-  client: {},
-  runtimeEnv: {
-    DEMO: cfEnv.DEMO,
-  },
-  emptyStringAsUndefined: true,
-});
-```
+    export const env = createEnv({
+      server: {
+        DEMO: z.string().trim().min(1),
+      },
+      client: {},
+      runtimeEnv: {
+        DEMO: cfEnv.DEMO,
+      },
+      emptyStringAsUndefined: true,
+    });
+    ```
 
-I created .dev.vars with `DEMO=hello` and added `DEMO: string;` in env.d.ts
-I then imported `env` used it in app/page.tsx, ran `npm run preview` and everything went well.
+- Set up `.dev.vars` with `DEMO=hello` and added `DEMO: string;` in `env.d.ts`.
+- Imported `env` in `app/page.tsx` and ran `npm run preview`—everything worked fine locally.
+- Deployed to Workers connected to Git, with:
+  - **Build command:** `npx cloudflare`
+  - **Deploy command:** `npx wrangler deploy`
+- Added the `DEMO` secret in **Variables and Secrets** (runtime) in the Settings, and re-deployed (CI/CD).
 
-I then deployed to Workers connected to Git:
-Build command: npx cloudflare
-Deploy command: npx wrangler deploy
-
-Add `DEMO` secret to **Variables and Secrets** in the Settings and pushed a commit to re-deploy (CI/CD).
-
-
-
-
-
+UPDATE (Fix to the issue):
+- Add the `DEMO` secret to **Variables and secrets** under the Build section instead
