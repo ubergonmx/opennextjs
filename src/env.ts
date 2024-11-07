@@ -1,8 +1,5 @@
-import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
-
-const { env: cfEnv } = await getCloudflareContext();
 
 export const env = createEnv({
   server: {
@@ -10,7 +7,7 @@ export const env = createEnv({
   },
   client: {},
   runtimeEnv: {
-    DEMO: cfEnv.DEMO,
+    DEMO: process.env.DEMO,
   },
   emptyStringAsUndefined: true,
 });
