@@ -1,0 +1,80 @@
+2024-11-07T20:18:00.487Z	Initializing build environment...
+2024-11-07T20:18:10.063Z	Success: Finished initializing build environment
+2024-11-07T20:18:10.385Z	Cloning repository...
+2024-11-07T20:18:11.946Z	Detected the following tools from environment: npm@10.8.3, nodejs@22.9.0
+2024-11-07T20:18:11.946Z	Installing project dependencies: npm clean-install --progress=false
+2024-11-07T20:18:15.237Z	npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2024-11-07T20:18:15.335Z	npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2024-11-07T20:18:15.527Z	npm warn deprecated rollup-plugin-inject@3.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-inject.
+2024-11-07T20:18:15.936Z	npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2024-11-07T20:18:17.017Z	npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2024-11-07T20:18:17.528Z	npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2024-11-07T20:18:17.682Z	npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2024-11-07T20:18:19.721Z	npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2024-11-07T20:18:27.628Z	
+2024-11-07T20:18:27.628Z	added 421 packages, and audited 422 packages in 15s
+2024-11-07T20:18:27.629Z	
+2024-11-07T20:18:27.630Z	137 packages are looking for funding
+2024-11-07T20:18:27.633Z	  run `npm fund` for details
+2024-11-07T20:18:27.659Z	
+2024-11-07T20:18:27.660Z	1 high severity vulnerability
+2024-11-07T20:18:27.660Z	
+2024-11-07T20:18:27.661Z	To address all issues, run:
+2024-11-07T20:18:27.661Z	  npm audit fix --force
+2024-11-07T20:18:27.662Z	
+2024-11-07T20:18:27.662Z	Run `npm audit` for details.
+2024-11-07T20:18:27.702Z	Executing user build command: npx cloudflare
+2024-11-07T20:18:28.632Z	Building the Next.js app in the current folder (/opt/buildhome/repo)
+2024-11-07T20:18:29.737Z	⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2024-11-07T20:18:29.757Z	Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2024-11-07T20:18:29.757Z	This information is used to shape Next.js' roadmap and prioritize features.
+2024-11-07T20:18:29.758Z	You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2024-11-07T20:18:29.758Z	https://nextjs.org/telemetry
+2024-11-07T20:18:29.758Z	
+2024-11-07T20:18:29.831Z	  ▲ Next.js 14.2.5
+2024-11-07T20:18:29.831Z	
+2024-11-07T20:18:29.924Z	   Creating an optimized production build ...
+2024-11-07T20:18:32.318Z	(node:557) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2024-11-07T20:18:32.318Z	(Use `node --trace-deprecation ...` to show where the warning was created)
+2024-11-07T20:18:39.798Z	(node:589) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2024-11-07T20:18:39.798Z	(Use `node --trace-deprecation ...` to show where the warning was created)
+2024-11-07T20:18:43.820Z	 ✓ Compiled successfully
+2024-11-07T20:18:43.821Z	   Linting and checking validity of types ...
+2024-11-07T20:18:47.810Z	   Collecting page data ...
+2024-11-07T20:18:49.151Z	❌ Invalid environment variables: { DEMO: [ 'Required' ] }
+2024-11-07T20:18:49.170Z	Error: Invalid environment variables
+2024-11-07T20:18:49.170Z	    at f (/opt/buildhome/repo/.next/server/app/page.js:6:42553)
+2024-11-07T20:18:49.171Z	    at /opt/buildhome/repo/.next/server/app/page.js:6:42733
+2024-11-07T20:18:49.171Z	    at i (/opt/buildhome/repo/.next/server/app/page.js:6:43041)
+2024-11-07T20:18:49.171Z	    at /opt/buildhome/repo/.next/server/app/page.js:6:41030
+2024-11-07T20:18:49.171Z	    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2024-11-07T20:18:49.188Z	
+2024-11-07T20:18:49.188Z	> Build error occurred
+2024-11-07T20:18:49.193Z	Error: Failed to collect page data for /
+2024-11-07T20:18:49.194Z	    at /opt/buildhome/repo/node_modules/next/dist/build/utils.js:1268:15
+2024-11-07T20:18:49.194Z	    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+2024-11-07T20:18:49.194Z	  type: 'Error'
+2024-11-07T20:18:49.194Z	}
+2024-11-07T20:18:49.222Z	node:internal/errors:983
+2024-11-07T20:18:49.222Z	  const err = new Error(message);
+2024-11-07T20:18:49.223Z	              ^
+2024-11-07T20:18:49.224Z	
+2024-11-07T20:18:49.224Z	Error: Command failed: npx next build
+2024-11-07T20:18:49.224Z	    at genericNodeError (node:internal/errors:983:15)
+2024-11-07T20:18:49.224Z	    at wrappedFn (node:internal/errors:537:14)
+2024-11-07T20:18:49.224Z	    at checkExecSyncError (node:child_process:890:11)
+2024-11-07T20:18:49.224Z	    at execSync (node:child_process:962:15)
+2024-11-07T20:18:49.224Z	    at runNextBuildCommand (file:///opt/buildhome/repo/node_modules/@opennextjs/cloudflare/dist/cli/index.mjs:405:3)
+2024-11-07T20:18:49.224Z	    at buildNextjsApp (file:///opt/buildhome/repo/node_modules/@opennextjs/cloudflare/dist/cli/index.mjs:401:3)
+2024-11-07T20:18:49.224Z	    at async build3 (file:///opt/buildhome/repo/node_modules/@opennextjs/cloudflare/dist/cli/index.mjs:7338:5)
+2024-11-07T20:18:49.224Z	    at async file:///opt/buildhome/repo/node_modules/@opennextjs/cloudflare/dist/cli/index.mjs:7417:1 {
+2024-11-07T20:18:49.224Z	  status: 1,
+2024-11-07T20:18:49.224Z	  signal: null,
+2024-11-07T20:18:49.225Z	  output: [ null, null, null ],
+2024-11-07T20:18:49.225Z	  pid: 530,
+2024-11-07T20:18:49.225Z	  stdout: null,
+2024-11-07T20:18:49.225Z	  stderr: null
+2024-11-07T20:18:49.225Z	}
+2024-11-07T20:18:49.225Z	
+2024-11-07T20:18:49.225Z	Node.js v22.9.0
+2024-11-07T20:18:49.246Z	Failed: error occurred while running build command
